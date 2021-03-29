@@ -110,6 +110,7 @@ header .menu .services-header .item:hover {
 .services .service {
   width: 48%;
   height: 250px;
+  position: relative;
 }
 
 .services .service.sub-service {
@@ -128,28 +129,52 @@ header .menu .services-header .item:hover {
 .services .service.sub-service .service_sub {
   width: 48%;
   height: 250px;
+  position: relative;
 }
 
-.services .service.sub-service .service_sub .img {
+.services .service.sub-service .service_sub .img-sub {
   width: 100%;
   height: 100%;
+  position: absolute;
+  z-index: 0;
 }
 
-.services .service.sub-service .service_sub .img .img {
-  width: 100%;
-  height: 100%;
-}
-
-.services .service.sub-service .service_sub .img .img img {
+.services .service.sub-service .service_sub .img-sub img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
+.services .service.sub-service .service_sub p {
+  text-align: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  z-index: 999;
+  position: absolute;
+  color: #fff;
+  font-size: 1.9em;
+  top: 80%;
+}
+
+.services .service.sub-service .service_sub .hover {
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+  position: absolute;
+  cursor: pointer;
+}
+
+.services .service.sub-service .service_sub .hover:hover {
+  background: rgba(0, 0, 0, 0.4);
+}
+
 .services .service .img {
   width: 100%;
   height: 100%;
+  position: absolute;
+  z-index: 0;
 }
 
 .services .service .img img {
@@ -157,6 +182,30 @@ header .menu .services-header .item:hover {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.services .service p {
+  text-align: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  z-index: 999;
+  position: absolute;
+  color: #fff;
+  font-size: 1.9em;
+  top: 80%;
+}
+
+.services .service .hover {
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+  position: absolute;
+  cursor: pointer;
+}
+
+.services .service .hover:hover {
+  background: rgba(0, 0, 0, 0.4);
 }
 
 .family {
@@ -174,5 +223,80 @@ header .menu .services-header .item:hover {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.icons {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.icons .icon {
+  width: 24%;
+}
+
+.icons .icon .img {
+  width: 35%;
+  margin: auto;
+  padding-bottom: 15px;
+}
+
+.icons .icon .img img {
+  width: 100%;
+}
+
+.icons .icon p {
+  text-align: center;
+  font-size: 1.4em;
+}
+
+footer {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background: #DED1B5;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+footer .links {
+  width: 25%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+footer .links a {
+  text-decoration: none;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+footer .links a:hover {
+  color: rgba(5, 102, 53, 0.699);
 }
 /*# sourceMappingURL=style.css.map */
