@@ -54,14 +54,24 @@ header .menu .services-header .item:hover {
   color: #fff;
 }
 
-.fondo {
+header .menu .sub-menu {
+  display: none;
+}
+
+header .menu .sub-menu .fa-bars {
+  font-size: 2em;
+  color: #000;
+}
+
+header .fondo {
   width: 100%;
   height: 550px;
   background-image: url("../img/fondo.jpg");
+  background-size: cover;
   position: relative;
 }
 
-.fondo .mensaje {
+header .fondo .mensaje {
   background: rgba(0, 0, 0, 0.25);
   width: 65%;
   margin: auto;
@@ -73,11 +83,11 @@ header .menu .services-header .item:hover {
   left: 20%;
 }
 
-.fondo .mensaje h1 {
+header .fondo .mensaje h1 {
   color: #fff;
 }
 
-.fondo .mensaje p {
+header .fondo .mensaje p {
   color: #fff;
   font-weight: bold;
   font-size: 1.2em;
@@ -205,11 +215,14 @@ header .menu .services-header .item:hover {
 .family {
   width: 100%;
   height: 300px;
+  position: relative;
 }
 
 .family .container-family {
   width: 100%;
   height: 100%;
+  position: absolute;
+  z-index: 1;
 }
 
 .family .container-family img {
@@ -217,6 +230,24 @@ header .menu .services-header .item:hover {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.family p {
+  position: absolute;
+  color: #fff;
+  bottom: 45%;
+  left: 15%;
+  font-size: 2.5em;
+  font-weight: bold;
+  z-index: 3;
+}
+
+.family .cover-family {
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.267);
+  position: absolute;
 }
 
 .icons {
@@ -292,5 +323,302 @@ footer .links a {
 
 footer .links a:hover {
   color: rgba(5, 102, 53, 0.699);
+}
+
+footer .links-m {
+  display: none;
+}
+
+@media only screen and (max-width: 1200px) {
+  .family p {
+    left: 5%;
+  }
+}
+
+@media only screen and (max-width: 1108px) {
+  header .menu .logo {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  header .menu .logo img {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  header .menu .services-header {
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 1057px) {
+  header .fondo .mensaje {
+    left: 15%;
+  }
+  .family p {
+    left: 2%;
+  }
+}
+
+@media only screen and (max-width: 1022px) {
+  .family p {
+    font-size: 2em;
+    left: 7%;
+  }
+}
+
+@media only screen and (max-width: 995px) {
+  header .menu {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  header .menu .logo {
+    width: 25%;
+  }
+  header .menu .services-header {
+    width: 100%;
+  }
+  header .menu .services-header.visible {
+    display: none;
+  }
+  header .menu .sub-menu {
+    width: 75%;
+    display: inline-block;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    -webkit-box-align: right;
+        -ms-flex-align: right;
+            align-items: right;
+  }
+  header .menu .sub-menu i {
+    float: right;
+    margin-right: 40px;
+    cursor: pointer;
+  }
+}
+
+@media only screen and (max-width: 930px) {
+  header .fondo {
+    height: 400px;
+  }
+  .services {
+    height: 500px;
+    padding-bottom: 0px;
+  }
+  .services .service {
+    height: 200px;
+  }
+  .services .service.sub-service .service_sub {
+    height: 200px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .icons .icon {
+    width: 35%;
+    padding-bottom: 50px;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .icons {
+    padding-bottom: 0px;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .services {
+    height: 850px;
+  }
+  .services .service {
+    width: 90%;
+  }
+  .services .service.sub-service .service_sub {
+    width: 49%;
+  }
+  .services .service.sub-service .service_sub p {
+    top: 45%;
+    left: 30%;
+  }
+  .services .service p {
+    top: 45%;
+    left: 30%;
+  }
+  .family {
+    height: 250px;
+  }
+  .family p {
+    bottom: 35%;
+    text-align: center;
+    left: 2%;
+    right: 2%;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  header .menu .services-header .item {
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 723px) {
+  header .menu .services-header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  header .menu .services-header .item {
+    width: 100%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  header .fondo .mensaje {
+    width: 75%;
+    left: 13%;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  footer .links {
+    display: none;
+  }
+  footer .links-m {
+    width: 35%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  footer .links-m a {
+    text-decoration: none;
+    color: #000;
+    margin-bottom: 20px;
+  }
+  footer .links-m a:hover {
+    color: rgba(5, 102, 53, 0.699);
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  header .fondo .mensaje {
+    width: 80%;
+    left: 10%;
+  }
+  .services {
+    height: 650px;
+  }
+  .services .service {
+    height: 150px;
+  }
+  .services .service.sub-service .service_sub {
+    height: 150px;
+  }
+}
+
+@media only screen and (max-width: 580px) {
+  header .menu .logo {
+    width: 35%;
+  }
+  header .menu .sub-menu {
+    width: 65%;
+  }
+  .services .service p {
+    left: 25%;
+  }
+  .family {
+    height: 200px;
+  }
+}
+
+@media only screen and (max-width: 560px) {
+  header .fondo .mensaje {
+    bottom: 20%;
+    width: 85%;
+    left: 8%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  header .menu .logo {
+    width: 45%;
+  }
+  header .menu .sub-menu {
+    width: 55%;
+  }
+  .icons .icon {
+    width: 30%;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+  .services .service p {
+    left: 18%;
+  }
+  .services.sub-service .service_sub p {
+    left: 18%;
+  }
+}
+
+@media only screen and (max-width: 440px) {
+  .icons .icon p {
+    font-size: 1em;
+  }
+}
+
+@media only screen and (max-width: 402px) {
+  .services .service p {
+    left: 14%;
+  }
+  .services.sub-service .service_sub p {
+    left: 14%;
+  }
+}
+
+@media only screen and (max-width: 382px) {
+  .services .service p {
+    left: 12%;
+  }
+  .services.sub-service .service_sub p {
+    left: 12%;
+  }
+}
+
+@media only screen and (max-width: 382px) {
+  footer .links-m {
+    width: 40%;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .services .service p {
+    left: 7%;
+  }
+  .services.sub-service .service_sub p {
+    left: 7%;
+  }
+}
+
+@media only screen and (max-width: 325px) {
+  .services .service p {
+    left: 7%;
+    margin-top: -30px;
+  }
+  .services.sub-service .service_sub p {
+    left: 7%;
+  }
 }
 /*# sourceMappingURL=header.css.map */
